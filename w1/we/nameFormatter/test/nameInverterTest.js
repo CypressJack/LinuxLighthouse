@@ -30,9 +30,15 @@ describe('nameInverter', function() {
   });
 
   it("should return an empty string when passed a single honorific", function() {
-    const name = "Dr. "
-    const inverter = nameInverter(name);
-    assert.isTrue(inverter === "");
+    const doctor = "Dr. ";
+    const mister = "Mr. ";
+    const missus = "Mrs. ";
+    const miss = "Ms. "
+    const inverter = nameInverter;
+    assert.isTrue(inverter(doctor) === "");
+    assert.isTrue(inverter(mister) === "");
+    assert.isTrue(inverter(missus) === "");
+    assert.isTrue(inverter(miss) === "");
   });
 
   it("should return honorific first-name when passed honorific first-name", function() {

@@ -2,9 +2,11 @@ const nameInverter = function(name) {
   let indexOfSpace = name.indexOf(" ");
   let lastIndexOfSpace = name.lastIndexOf(" ");
   let length = name.length;
+  let nameStart = name.slice(0, 3);
   console.log(`String is: "${name}`);
-  console.log(`first name is: "${name.slice(0, indexOfSpace)}"`);
-  console.log(`last name is: "${name.slice(indexOfSpace + 1, length)}"`);
+  console.log(`first word is: "${name.slice(0, indexOfSpace)}"`);
+  console.log(`second word is: "${name.slice(indexOfSpace + 1, length)}"`);
+  console.log(`third word is: "${name.slice(lastIndexOfSpace, name.length)}"`);
   if (name === "") {
     return "";
   } else if (!name.includes(" ")) {
@@ -16,11 +18,15 @@ const nameInverter = function(name) {
     let lastName = name.slice(indexOfSpace + 1, length);
     console.log(`${firstName}, ${lastName}`);
     return `${lastName}, ${firstName}`;
+  } else if (name === "Dr. " || name === "Mr. " || name === "Mrs. " || name === "Ms. ") {
+    return "";
+  } else if ((nameStart === "Dr. " || nameStart === "Mr. " || nameStart === "Mrs. " || nameStart === "Ms. ") && indexOfSpace === lastIndexOfSpace) {
+    return name;
   }
 }
 
 
-console.log(`Name Inverter Returns: ${nameInverter("first last")}`);
+console.log(`Name Inverter Returns: ${nameInverter("Dr.first last")}`);
 
 
 module.exports = nameInverter;
