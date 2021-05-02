@@ -2,6 +2,7 @@ const chai = require('chai');
 const assert = chai.assert;
 const expect = chai.expect;
 
+
 const nameInverter = require('../nameInverter.js');
 
 describe('nameInverter', function() {
@@ -42,9 +43,15 @@ describe('nameInverter', function() {
   });
 
   it("should return honorific first-name when passed honorific first-name", function() {
-    const name = "Dr. first"
-    const inverter = nameInverter(name);
-    assert.isTrue(inverter === "Dr. first");
+    const doctor = "Dr. first";
+    const mister = "Mr. first";
+    const missus = "Mrs. first";
+    const miss = "Ms. first"
+    const inverter = nameInverter;
+    assert.isTrue(inverter(doctor) === "Dr. first");
+    assert.isTrue(inverter(mister) === "Mr. first");
+    assert.isTrue(inverter(missus) === "Mrs. first");
+    assert.isTrue(inverter(miss) === "Ms. first");
   });
 
   it("should return a honorific last-name, first-name when passed honorific first-name last-name", function() {
