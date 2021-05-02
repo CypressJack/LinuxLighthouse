@@ -55,15 +55,27 @@ describe('nameInverter', function() {
   });
 
   it("should return a honorific last-name, first-name when passed honorific first-name last-name", function() {
-    const name = "Dr. first-name last-name"
-    const inverter = nameInverter(name);
-    assert.isTrue(inverter === "Dr. last-name, first-name");
+    const doctor = "Dr. first-name last-name";
+    const mister = "Mr. first-name last-name";
+    const missus = "Mrs. first-name last-name";
+    const miss = "Ms. first-name last-name"
+    const inverter = nameInverter;
+    assert.isTrue(inverter(doctor) === "Dr. last-name, first-name");
+    assert.isTrue(inverter(mister) === "Mr. last-name, first-name");
+    assert.isTrue(inverter(missus) === "Mrs. last-name, first-name");
+    assert.isTrue(inverter(miss) === "Ms. last-name, first-name");
   });
 
   it("should return a honorific last-name, first-name when passed honorific first-name last-name with extra spaces around the words", function() {
-    const name = " Dr. first-name last-name "
-    const inverter = nameInverter(name);
-    assert.isTrue(inverter === "Dr. last-name, first-name");
+    const doctor = " Dr. first-name last-name ";
+    const mister = " Mr. first-name last-name ";
+    const missus = " Mrs. first-name last-name ";
+    const miss = " Ms. first-name last-name "
+    const inverter = nameInverter;
+    assert.isTrue(inverter(doctor) === "Dr. last-name, first-name");
+    assert.isTrue(inverter(mister) === "Mr. last-name, first-name");
+    assert.isTrue(inverter(missus) === "Mrs. last-name, first-name");
+    assert.isTrue(inverter(miss) === "Ms. last-name, first-name");
   });
 
   it("should throw an error when name is undefined", function() {
