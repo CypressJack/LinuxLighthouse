@@ -3,10 +3,10 @@ const assertEqual = require('../assertEqual');
 const tail = require('../tail');
 
 describe("#tail", () => {
-  it("returns [2, 3] for [1, 2, 3]", () => {
+  it("Returns everything except for the first item in the array [2, 3] for [1, 2, 3]", () => {
     assert.deepEqual(tail([1, 2, 3]), [2, 3]);
   });
-  it("returns [1] for [2, 1]", () => {
+  it("Returns everything except for the first item in the array ['3, 4, 5, '3', 1] for ['2', 3, 4, 5, '3', 1]", () => {
     assert.deepEqual(tail([2, 1]), [1]); 
   });
 });
