@@ -49,3 +49,5 @@ console.log("Second Case")
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 console.log("Third Case")
 console.log(without(["1", "2", "3"], [1, "3", 2])); // => ["1", "2"]
+
+module.exports = without;

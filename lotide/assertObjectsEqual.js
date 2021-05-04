@@ -54,5 +54,4 @@ const object2 = {
   c:3
 }
 
-
-assertObjectsEqual(object1, object2);
+module.exports = assertObjectsEqual;

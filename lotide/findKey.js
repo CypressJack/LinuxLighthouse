@@ -23,6 +23,8 @@ const findKey = function(object, rule) {
   }
 }
 
+module.exports = findKey;
+
 
 
 

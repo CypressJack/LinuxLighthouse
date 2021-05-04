@@ -57,4 +57,4 @@ const letterObject = {
   e: true,
 }
 
-console.log(countOnly(letterArray, letterObject));
+module.exports = countOnly;

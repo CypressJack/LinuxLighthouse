@@ -24,6 +24,8 @@ const eqArrays = function(array1, array2) {
   }
 }
 
-assertEqual(eqArrays(map(words, word => word.length), [ '6', '7', '2', '5', '3' ]), true);
-assertEqual(eqArrays(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]), true);
-assertEqual(eqArrays(map(words, word => word.slice(2)), [ 'ound', 'ntsrol', '', 'jor', 'm' ]), true);
+// assertEqual(eqArrays(map(words, word => word.length), [ '6', '7', '2', '5', '3' ]), true);
+// assertEqual(eqArrays(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]), true);
+// assertEqual(eqArrays(map(words, word => word.slice(2)), [ 'ound', 'ntsrol', '', 'jor', 'm' ]), true);
+
+module.exports = map;

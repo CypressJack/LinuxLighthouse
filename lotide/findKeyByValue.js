@@ -23,3 +23,5 @@ const favouriteMovies = {
 }
 
 console.log(findKeyByValue(favouriteMovies, "Knocked Up"));
+
+module.exports = findKeyByValue;
